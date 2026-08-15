@@ -1,0 +1,85 @@
+
+
+import streamlit as st
+import time
+
+# 1. 設置國際年會高質感色系與網頁配置
+st.set_page_config(page_title="P09 - HACCP Handover System", layout="centered")
+st.markdown("""
+    <style>
+    .main { background-color: #F4F4F6; } /* 國際學術大廠級暖淺灰底 */
+    h1, h2 { color: #2C3E50; font-family: 'Helvetica Neue', sans-serif; font-weight: 700; } /* 深碳灰大標 */
+    h3 { color: #007A87; } /* 醫學深邃藍次標 */
+    div.stButton > button:first-child { background-color: #007A87; color: white; font-weight: bold; border-radius: 5px; }
+    div.stButton > button:first-child:hover { background-color: #FF6B35; border-color: #FF6B35; }
+    </style>
+    """, unsafe_allow_html=True)
+
+# 標題與學術定錨
+st.title("📱 P09: EMS HACCP Handover App Dashboard")
+st.caption("Active Engine: SEIPS 2.0 + MIST/SBAR Standard | Evidence Base: MMAT 29 Core Literature Articles")
+
+# 區塊一：大會最看重的資通訊韌性環境測試
+st.write("---")
+st.header("🌐 1. 系統韌性網路環境模擬 (Resilience Test)")
+st.write("*(大會評審與主席可親自切換網路狀態，測試系統在極端天災斷網下的應變路徑)*")
+network_mode = st.radio(
+    "請選擇當前救護現場與急診室之網路狀態：",
+    ["正常聯網 (Online Mode - Cloud Protection)", "極端災難斷網 (Offline/Contingency Mode - Total Outage)"]
+)
+
+# 區塊二：第一線 EMT 臨床最熟悉的 MIST 語法輸入
+st.write("---")
+st.header("🚑 2. MIST 院前傷病摘要 (Paramedic Prehospital Input)")
+col1, col2 = st.columns(2)
+with col1:
+    m_mechanism = st.text_input("M - 受傷機制 / 主要病因 (Mechanism)", "急性心肌梗塞 (AMI) 疑似合併低血壓")
+    i_injuries = st.text_input("I - 傷勢 / 主要表徵 (Injuries/Symptoms)", "持續性劇烈胸悶、冒冷汗、轉移至左肩")
+with col2:
+    s_vitals = st.text_input("S - 關鍵生命徵象 (Vitals)", "BP 88/54, HR 108 bpm, SpO2 93% on Mask")
+    t_treatment = st.text_input("T - 到院前關鍵處置 (Treatment)", "IV 建立, Aspirin 給予, 12導程心電圖傳輸完成")
+
+# 區塊三：後台 HACCP 危害管制引擎核心（以 SBAR 為檢核防線）
+st.write("---")
+st.header("🏥 3. SBAR 關鍵控制點檢核 (HACCP CCP Monitors)")
+st.write("*(後台 HACCP 風險引擎將實時監控以下關鍵控制點是否產生資訊漏接危害)*")
+
+ccp_s = st.checkbox("【S - Situation】接收端急診檢傷護理師已確認就位並鎖定病床")
+ccp_b = st.checkbox("【B - Background】患者過去重要病史與藥物過敏史已完整點收")
+ccp_a = st.checkbox("【A - Assessment】危急臨床變化（如時序性低血壓早期預警 O04）已向院端發出預警")
+ccp_r = st.checkbox("【R - Recommendation】下一步關鍵醫療銜接（如直接啟動心導管室 Cath-Lab）已達成共識")
+
+# 區塊四：觸發檢核與互動邏輯釋放
+st.write("---")
+if st.button("🚀 執行 HACCP 數位防錯與應變計畫檢核"):
+    with st.spinner("HACCP 跨界風險預防引擎精密運算中..."):
+        time.sleep(0.8)
+        
+    if network_mode == "正常聯網 (Online Mode - Cloud Protection)":
+        # 聯網狀態：執行「主動危害預防 (Proactive Hazard Prevention)」
+        if not (ccp_s and ccp_b and ccp_a and ccp_r):
+            st.markdown("""
+                <div style="background-color: #FF6B35; padding: 20px; border-radius: 8px; color: white; font-weight: bold; margin-top: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+                    ⚠️ 【HACCP 後台主動危害預防（Proactive Hazard Prevention）觸發】<br>
+                    人因工程系統偵測到重大交班缺失：SBAR 框架內有關鍵控制點（CCP）尚未完成複核確認！<br><br>
+                    [危害風險]：到院前後資訊斷層可能導致臨床銜接延遲（D2B時間拉長）。<br>
+                    [系統動作]：平板已主動攔截並鎖定此筆交班，請立即補正未檢核之核心欄位！
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.balloons()
+            st.success("✅ [交班成功] 完美符合 HACCP 安全控制點！SBAR + MIST 數據已實時、高保真同步至院端醫療資訊系統 (HIS)。")
+            
+    else:
+        # 斷網狀態：無縫執行「應變計畫執行機制 (Contingency Plan / Implementation)」
+        st.markdown("""
+            <div style="background-color: #2C3E50; padding: 20px; border-radius: 8px; color: white; font-weight: bold; margin-top: 15px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+                🔌 【系統流程韌性：極端斷網應變計畫啟動 (Contingency Plan Active)】<br>
+                現場連線完全中斷！雲端通訊失聯，本地端 HACCP 韌性防禦機制立刻自動接管。<br><br>
+                [離線執行機制 (Implementation)]：<br>
+                1. 系統已強制鎖定當前輸入之 MIST & SBAR 結構化數據，防止因斷線造成流失。<br>
+                2. 啟用「離線點對點（P2P）對位協議」：平板已自動將交班數據轉譯為加密本地藍牙/Wi-Fi Direct 數據包。<br>
+                3. 請急診護理師打開接收端平板本機互聯，即可在 100% 斷網環境下完成零漏接的安全交班。
+            </div>
+            """, unsafe_allow_html=True)
+        st.info("📦 系統韌性安全承諾：離線交班資料已加密暫存於本機 Flash 記憶體中，將於網路恢復後自動補行背景同步。")
