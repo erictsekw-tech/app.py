@@ -19,7 +19,7 @@ st.markdown("""
 st.title("📱 P09: EMS HACCP Handover App")
 st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 
-# (Patient Banner)
+#  (Patient Banner)
 st.markdown("""
     <div class="patient-banner">
         <b>[PATIENT]</b> Johnathan Doe (62M) | <b>[CASE ID]</b> TW-2026-AMI-0817<br>
@@ -28,15 +28,15 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-# Section 1: Connectivity (Resilience Matrix)
-st.header("🌐 1. Connectivity Status")
+# Section 1: Connectivity
+st.header("🌐 1. Network State")
 network_mode = st.radio(
     "Select Network State:",
     ["Online (Cloud-Protected Mode)", "Offline (Total Network Outage)"],
     label_visibility="collapsed"
 )
 
-# (Short Keywords)
+#  (Short Keywords)
 st.write("---")
 st.header("🚑 2. MIST Datasets")
 col1, col2 = st.columns(2)
@@ -49,7 +49,9 @@ with col2:
 
 # Section 3: SBAR CCP Monitors
 st.write("---")
-st.header("🏥 3. SBAR Critical Control Points (CCPs)")
+st.header("🏥 3. SBAR (CCPs)")
+st.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points</h3>", unsafe_allow_html=True)
+
 ccp_s = st.checkbox("【S】ED Triage Nurse identified & resuscitation bed locked.")
 ccp_b = st.checkbox("【B】Past history (HTN, PCI) & allergies transferred.")
 ccp_a = st.checkbox("【A】Critical variations (Time-series Hypotension) pre-warned.")
@@ -63,10 +65,6 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail"):
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
         
     if network_mode == "Online (Cloud-Protected Mode)":
-        if not (ccp_s and ccp_b if 'ccp_b' in locals() else ccp_b and ccp_a and ccp_r):
-            pass # Fallback check below handles the exact logic safely
-        
-        # Exact boolean logic check
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
             st.markdown(f"""
                 <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
@@ -88,7 +86,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail"):
             <div style="background-color: #2C3E50; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
                 🔌 [CONTINGENCY PLAN ENGAGED: OFFLINE MODE]<br>
                 [Offline Received Time Stamp]: {current_time}<br>
-                [Action]: P2P encrypted Bluetooth handover complete. Data cached locally.
+                [Action]: P2P secured Bluetooth handover complete. Data cached locally.
             </div>
             """, unsafe_allow_html=True)
 
