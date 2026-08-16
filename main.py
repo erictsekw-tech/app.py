@@ -44,8 +44,8 @@ with col1:
     m_mechanism = st.text_input("M - Mechanism / Etiology", "AMI / Cardiogenic Shock")
     i_injuries = st.text_input("I - Injuries / Symptoms", "Crushing chest pain, Diaphoresis")
 with col2:
-    s_vitals = st.text_input("S - Vitals (BP/HR/SpO2)", "BP 88/54, HR 108, SpO2 93% on NRM")
-    t_treatment = st.text_input("T - Treatment given", "IV 18G, Aspirin 300mg PO, NTG withheld")
+    s_vitals = st.text_input("S - Vitals (BP/HR/SpO2)", "BP 88/54, HR 108, SpO2 95%")
+    t_treatment = st.text_input("T - Treatment given", "Aspirin 300mg PO given, NTG withheld")
 
 # Section 3: SBAR CCP Monitors
 st.write("---")
