@@ -63,7 +63,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail"):
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
         
     if network_mode == "Online (Cloud-Protected Mode)":
-        if not (ccp_s and ccop_b if 'ccp_b' in locals() else ccp_b and ccp_a and ccp_r):
+        if not (ccp_s and ccp_b if 'ccp_b' in locals() else ccp_b and ccp_a and ccp_r):
             pass # Fallback check below handles the exact logic safely
         
         # Exact boolean logic check
