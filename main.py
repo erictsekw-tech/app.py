@@ -65,7 +65,7 @@ ccp_r = st.checkbox("【R】Next-step care transition (In-hospital) agreed (院�
 # Section 4: Audit Output
 st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
-    if network_mode.stsrtswith("Online"): 
+    if network_mode.startswith("Online"): 
         time.sleep(0.4)
     current_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8")
         
