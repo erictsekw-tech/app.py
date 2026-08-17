@@ -23,8 +23,8 @@ st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 st.markdown("""
     <div class="patient-banner">
         <b>[PATIENT 病人]</b> Johnathan Doe (62M) | <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
+        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock (心梗合併早期休克)<br>
         <b>[TRIAGE 檢傷]</b> Level 2 (危急) | <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
-        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock (心梗合併早期休克)
     </div>
     """, unsafe_allow_html=True)
 
