@@ -135,3 +135,7 @@ with st.expander("📚 View Vancouver References"):
     2. **Smith JA, Jones RT.** Application of HACCP principles to optimize clinical transitions. *Med Care Inform*. 2021;12(4):304-315.
     3. **Hong QN, Pluye P, et al.** Mixed Methods Appraisal Tool (MMAT), version 2018. *Registration of Copyright*. 2018;1148825.  
     """)
+
+# 網頁最底端安全簽章（Footer）
+st.write("---")
+st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.</p>", unsafe_allow_html=True)
