@@ -45,7 +45,7 @@ with col1:
     i_injuries = st.text_input("I - Injuries / Symptoms (傷情/症狀)", "Crushing chest pain, Diaphoresis")
 with col2:
     s_vitals = st.text_input("S - Vitals (BP/HR/SpO2 血壓/心跳/血氧)", "BP 88/54, HR 108, SpO2 95%")
-    t_treatment = st.text_input("T - Treatment given (處置)", "aspirin PO / 300mg | NTG SL / Withheld")
+    t_treatment = st.text_input("T - Treatment given (處置)", "Aspirin PO / 300mg | NTG SL / Withheld")
 
 # Section 3: SBAR CCP Monitors
 st.write("---")
