@@ -35,11 +35,11 @@ st.header("🌐 1. Network State")
 st.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(網路狀態)</h1>", unsafe_allow_html=True)
 network_mode = st.radio(
     "Select Network State:",
-    ["Online (Cloud-Protected Mode / 雲端連線模式)", "Offline (Total Network Outage / 斷網模式)"],
+    ["Online (Cloud-Protected Mode / 雲端連線)", "Offline (Total Network Outage / 斷網模式)"],
     label_visibility="collapsed"
 )
 
-# 極簡化字段輸入 (Short Keywords)
+# Section 2: MIST Datasets (Short Keywords)
 st.write("---")
 st.header("🚑 2. MIST Datasets")
 st.markdown("<h2 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(到院前摘要)</h2>", unsafe_allow_html=True)
@@ -65,11 +65,11 @@ ccp_r = st.checkbox("【R】Next-step care transition (In-hospital) agreed (院�
 # Section 4: Audit Output
 st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
-    if network_mode.startswith("Online"): 
+    with st.spinner("Auditing..."): 
         time.sleep(0.4)
     current_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8")
         
-    if network_mode == "Online (Cloud-Protected Mode / 雲端連線)":
+    if network_mode.startwith("Online):
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
             st.markdown(f"""
                 <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
