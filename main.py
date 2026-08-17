@@ -65,36 +65,45 @@ ccp_r = st.checkbox("【R】Next-step care transition (In-hospital) agreed (院�
 # Section 4: Audit Output
 st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
-    with st.spinner("Auditing..."):
+    with st.spinner("Auditing..."): 
         time.sleep(0.4)
     current_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8")
         
-    if network_mode == "Online (Cloud-Protected Mode / 雲端連線模式)":
+    if network_mode == "Online (Cloud-Protected Mode / 雲端連線)":
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
             st.markdown(f"""
-                <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
-                    ⚠️ [HACCP TRIGGERED: DATA OMISSION DETECTED]<br>
-                    [警示]：人為疏漏攔截！SBAR 關鍵控制點未勾選完整。<br>
-                    [Action 系統處置]：交班資料禁止送出，請補正必填欄位。 (Timestamp: {current_time})
+                <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
+                    <b>⚠️ [HACCP TRIGGERED: DATA OMISSION DETECTED]</b><br>
+                    • <b>Status:</b> Critical human factors omission detected in SBAR CCP fields.<br>
+                    • <b>狀態：</b>人為疏漏攔截！SBAR 關鍵控制點未勾選完整。<br>
+                    • <b>Action:</b> Handover data transmission blocked. Please amend required fields.<br>
+                    • <b>處置：</b>交班資料禁止送出，請補正必填欄位。<br>
+                    • <b>Timestamp:</b> {current_time}
                 </div>
                 """, unsafe_allow_html=True)
-        else: 
+        else:
             st.markdown(f"""
-                <div style="background-color: #2E7D32; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
-                    ✅ [HANDOVER AUDIT COMPLIANT]<br>
-                    [成功]：100% 符合 HACCP 安全控管指標。<br>
-                    [Action 系統處置]：結構化數據已同步至醫院急診 HIS 系統。 (Timestamp: {current_time})
+                <div style="background-color: #2E7D32; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
+                    <b>✅ [HANDOVER AUDIT COMPLIANT]</b><br>
+                    • <b>Status:</b> 100% compliant with HACCP safety control metrics.<br>
+                    • <b>狀態：</b>100% 符合 HACCP 安全控管指標。<br>
+                    • <b>Action:</b> Structured datasets successfully synchronized to hospital HIS.<br>
+                    • <b>處置：</b>結構化數據已成功同步至醫院急診 HIS 系統。<br>
+                    • <b>Timestamp:</b> {current_time}
                 </div>
                 """, unsafe_allow_html=True)
     else:
         st.markdown(f"""
-            <div style="background-color: #2C3E50; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
-                🔌 [CONTINGENCY PLAN ENGAGED: OFFLINE MODE]<br>
-                [韌性啟動]：偵測到完全斷網！本地端應變計畫強制接管。<br>
-                [Action 系統處置]：P2P 加密藍牙交班成功！資料已暫存於雙端平板，待網絡恢復後自動追補。 (Timestamp: {current_time})
+            <div style="background-color: #2C3E50; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
+                <b>🔌 [CONTINGENCY PLAN ENGAGED: OFFLINE MODE]</b><br>
+                • <b>Status:</b> Total network outage detected. Localized fallback activated.<br>
+                • <b>狀態：</b>偵測到完全斷網！本地端應變計畫強制接管。<br>
+                • <b>Action:</b> P2P secured Bluetooth handover complete. Data cached locally.<br>
+                • <b>處置：</b>P2P 加密藍牙交班成功！資料已安全暫存於雙端平板。<br>
+                • <b>Timestamp:</b> {current_time}
             </div>
             """, unsafe_allow_html=True)
-
+        
 # Section 4: Clinical Notes
 st.write("---")
 st.header("📝 4. Clinical Notes")
