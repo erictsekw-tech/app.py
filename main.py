@@ -67,7 +67,7 @@ st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
     with st.spinner("Auditing..."): 
         time.sleep(0.4)
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S GMT+8")
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC+8 (Local Time)")
         
     if network_mode.startswith("Online"):
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
@@ -112,7 +112,7 @@ expert_name = st.text_input("User ID / Institution (人員代號/單位):", plac
 expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (救護員備註/急診點收紀錄):", placeholder="請在此輸入現場異常狀況或同儕指導意見...")
 if st.button("Save Note (儲存備註)"):
     if expert_name and expert_comment:
-        st.success(f"✅ Record saved at {datetime.now().strftime('%H:%M:%S')} (系統資料庫已更新)")
+        st.success(f"✅ Record saved at {datetime.now().strftime('%H:%M:%S UTC+8 (Local Time)')} (系統資料庫已更新)")
         st.markdown("<p style='font-size: 11px; color: #7F8C8D; font-style: italic; margin-top: 10px;'>* Sandbox simulation portal available until October 31, 2026. All data logs are synchronized and cleared dynamically.</p>", unsafe_allow_html=True)
     else:
         st.warning("⚠️ Fields cannot be blank. (欄位不可留白)")
