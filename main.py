@@ -67,7 +67,7 @@ st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
     with st.spinner("Auditing..."):
         time.sleep(0.4)
-    current_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8")
+    current_time = (datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8")
         
     if network_mode == "Online (Cloud-Protected Mode / 雲端連線模式)":
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
