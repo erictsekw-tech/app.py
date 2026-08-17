@@ -69,7 +69,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
         time.sleep(0.4)
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S GMT+8")
         
-    if network_mode.startswith"Online(Cloud-Protected Mode)":
+    if network_mode.startswith"Online":
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
             st.markdown(f"""
                 <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
