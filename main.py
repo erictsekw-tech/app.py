@@ -22,14 +22,17 @@ st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 # 標準醫學首頁牌 (Patient Banner)
 st.markdown("""
     <div class="patient-banner">
-        <b>[PATIENT 病人]</b> Johnathan Doe (62M) | <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
+        <b>[PATIENT 病人]</b> Johnathan Doe (62M)<br>
+        <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
         <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock (心梗合併早期休克)<br>
-        <b>[TRIAGE 檢傷]</b> Level 2 (危急) | <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
+        <b>[TRIAGE 檢傷]</b> Level 2 (危急)<br>
+        <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
     </div>
     """, unsafe_allow_html=True)
 
 # Section 1: Connectivity (Resilience Matrix)
-st.header("🌐 1. Network State (網路狀態)")
+st.header("🌐 1. Network State")
+st.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(網路狀態)</h1>", unsafe_allow_html=True)
 network_mode = st.radio(
     "Select Network State:",
     ["Online (Cloud-Protected Mode / 雲端連線模式)", "Offline (Total Network Outage / 斷網模式)"],
@@ -38,7 +41,9 @@ network_mode = st.radio(
 
 # 極簡化字段輸入 (Short Keywords)
 st.write("---")
-st.header("🚑 2. MIST Datasets (到院前摘要)")
+st.header("🚑 2. MIST Datasets")
+st.markdown("<h2 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(到院前摘要)</h2>", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 with col1:
     m_mechanism = st.text_input("M - Mechanism / Etiology (機轉/病因)", "AMI / Cardiogenic Shock")
@@ -92,7 +97,8 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
 
 # Section 4: Clinical Notes
 st.write("---")
-st.header("📝 4. Clinical Notes (臨床備註欄)")
+st.header("📝 4. Clinical Notes")
+st.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
 expert_name = st.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
 expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (救護員備註/急診點收紀錄):", placeholder="請在此輸入現場異常狀況或同儕指導意見...")
 if st.button("Save Note (儲存備註)"):
@@ -106,10 +112,10 @@ st.write("---")
 with st.expander("📄 View Academic Abstract"):
     st.markdown("""
     **Title:** Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review  
-    **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.
-    **Methods:** Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval to ensure the consistency of data selection and method rigor.
-    **Results:** A management framework was designed by introducing industrial HACCP principles into the EMS system. By establishing a historical operational baseline from 1990 to 2016, prehospital process adjustments show potentials in reducing door-to-imaging and door-to-treatment intervals in downstream hospital units. Through the first principle of hazard analysis, communication failure points are systematically identified across four dimensions: persons, tasks, tools or technology, and the environment. To protect frontline responders from cognitive overload, the risk-monitoring mechanism operates in the background while paramedics use standard MIST or SBAR protocols. The system sets operational boundaries across three levels: Control Points (CPs), Critical Control Points (CCPs), and low-technology Disaster Backups for crisis management.
-    **Conclusion:** Conventional paper checklists are insufficient to prevent communication breakdown during long power outages. By using fixed industrial rules as a defense barrier, this model standardizes paramedic handovers for daily operations and disasters without altering medical choices. This study provides a structured tool for future real-world testing.
+    **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.<br>
+    **Methods:** Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval to ensure the consistency of data selection and method rigor.<br>
+    **Results:** A management framework was designed by introducing industrial HACCP principles into the EMS system. By establishing a historical operational baseline from 1990 to 2016, prehospital process adjustments show potentials in reducing door-to-imaging and door-to-treatment intervals in downstream hospital units. Through the first principle of hazard analysis, communication failure points are systematically identified across four dimensions: persons, tasks, tools or technology, and the environment. To protect frontline responders from cognitive overload, the risk-monitoring mechanism operates in the background while paramedics use standard MIST or SBAR protocols. The system sets operational boundaries across three levels: Control Points (CPs), Critical Control Points (CCPs), and low-technology Disaster Backups for crisis management.<br>
+    **Conclusion:** Conventional paper checklists are insufficient to prevent communication breakdown during long power outages. By using fixed industrial rules as a defense barrier, this model standardizes paramedic handovers for daily operations and disasters without altering medical choices. This study provides a structured tool for future real-world testing.<br>
     **Keywords:** Paramedics; Prehospital Handover; Emergency Department; HACCP; Disaster Resilience
     """)
 
