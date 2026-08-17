@@ -67,7 +67,7 @@ st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
     with st.spinner("Auditing..."):
         time.sleep(0.4)
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC+8")
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC + 8")
         
     if network_mode == "Online (Cloud-Protected Mode / 雲端連線模式)":
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
@@ -78,7 +78,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
                     [Action 系統處置]：交班資料禁止送出，請補正必填欄位。 (Timestamp: {current_time})
                 </div>
                 """, unsafe_allow_html=True)
-        else:
+        else: 
             st.markdown(f"""
                 <div style="background-color: #2E7D32; padding: 15px; border-radius: 4px; color: white; font-weight: bold;">
                     ✅ [HANDOVER AUDIT COMPLIANT]<br>
