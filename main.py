@@ -128,8 +128,8 @@ st.markdown("""
     **Keywords:** Paramedics; Prehospital Handover; Emergency Department; HACCP; Disaster Resilience
     """)
 
-st.expander("📚 View Vancouver References"):
-st.markdown("""
+with st.expander("📚 View Vancouver References"):
+    st.markdown("""
     1. **Chen Y, Wang LC, Chang CC.** Human factors in prehospital handover: a systematic review. *J Emerg Med*. 2023;45(2):112-120.<br>
     2. **Smith JA, Jones RT.** Application of HACCP principles to optimize clinical transitions. *Med Care Inform*. 2021;12(4):304-315.<br>
     3. **Hong QN, Pluye P, et al.** Mixed Methods Appraisal Tool (MMAT), version 2018. *Registration of Copyright*. 2018;1148825.
