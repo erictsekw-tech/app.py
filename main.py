@@ -62,11 +62,6 @@ ccp_b = st.checkbox("【B - Background】 History & allergies transferred<br><sp
 ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned<br><span style='color: #7F8C8D; font-size: 13px;'>危急變化與低血壓預警</span>", unsafe_allow_html=True)
 ccp_r = st.checkbox("【R - Recommendation】 Next-step care transition agreed<br><span style='color: #7F8C8D; font-size: 13px;'>院內照護通道確認</span>", unsafe_allow_html=True)
 
-ccp_s = st.checkbox("【S】ED Triage Nurse identified & bed locked (檢傷護理師確認、床位鎖定).")
-ccp_b = st.checkbox("【B】Past history (HTN, PCI) & allergies transferred (過去病史、過敏史已點交).")
-ccp_a = st.checkbox("【A】Critical variations (Hypotension) pre-warned (危急變化與低血壓已預警).")
-ccp_r = st.checkbox("【R】Next-step care transition (In-hospital) agreed (院內照護通道確認).")
-
 # Section 4: Audit Output
 st.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
