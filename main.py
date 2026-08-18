@@ -66,7 +66,7 @@ ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed
 
 # Section 4: Audit Output
 st.write("---")
-if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審計)"):
+if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審核)"):
     with st.spinner("Auditing..."): 
         time.sleep(0.4)
     current_time = (datetime.now() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8 (Local Time)")
