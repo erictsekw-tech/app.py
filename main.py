@@ -60,9 +60,9 @@ st.header("🏥 3. SBAR (CCPs)")
 st.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
 
 ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked    \n(檢傷護理師與床位確認)")
-ccp_b = st.checkbox("【B - Background】 History & allergies transferred    \n(病史與過敏史點交)")
+ccp_b = st.checkbox("【B - Background】 PH(HTN,PCI) & Allergies transferred    \n(病史與過敏史點交)")
 ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned    \n(危急變化與低血壓預警)")
-ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(救護與檢傷確認病床鎖定)")
+ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(院內照護通道確認)")
 
 # Section 4: Audit Output
 st.write("---")
