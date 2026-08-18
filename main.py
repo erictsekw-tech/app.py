@@ -121,21 +121,31 @@ if st.button("Save Note (儲存備註)"):
 st.write("---")
 with st.expander("📄 View Academic Abstract"):
     st.markdown("""
-    **Title:** Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review  
-    **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
-    **Methods:** Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval to ensure the consistency of data selection and method rigor.  
-    **Results:** A management framework was designed by introducing industrial HACCP principles into the EMS system. By establishing a historical operational baseline from 1990 to 2016, prehospital process adjustments show potentials in reducing door-to-imaging and door-to-treatment intervals in downstream hospital units. Through the first principle of hazard analysis, communication failure points are systematically identified across four dimensions: persons, tasks, tools or technology, and the environment. To protect frontline responders from cognitive overload, the risk-monitoring mechanism operates in the background while paramedics use standard MIST or SBAR protocols. The system sets operational boundaries across three levels: Control Points (CPs), Critical Control Points (CCPs), and low-technology Disaster Backups for crisis management.  
-    **Conclusion:** Conventional paper checklists are insufficient to prevent communication breakdown during long power outages. By using fixed industrial rules as a defense barrier, this model standardizes paramedic handovers for daily operations and disasters without altering medical choices. This study provides a structured tool for future real-world testing.  
+    <b>Title:</b> Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review  
+    <b>Background:</b> Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
+     <a href="#ref-1" style="color: #007A87; font-weight: bold; text-decoration: none;">[1,2]</a>.<br>
+     <b>Methods:</b> Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval to ensure the consistency of data selection and method rigor.  
+    <b>14-day interval <a href="#ref-5" style="color: #FF6B35; font-weight: bold; text-decoration: none;">[5]</a></b> to ensure the consistency of data selection and method rigor.<br>
+    <b>Results:</b> A management framework was designed by introducing industrial HACCP principles into the EMS system. By establishing a historical operational baseline from 1990 to 2016, prehospital process adjustments show potentials in reducing door-to-imaging and door-to-treatment intervals in downstream hospital units. Through the first principle of hazard analysis, communication failure points are systematically identified across four dimensions: persons, tasks, tools or technology, and the environment. To protect frontline responders from cognitive overload, the risk-monitoring mechanism operates in the background while paramedics use standard MIST or SBAR protocols. The system sets operational boundaries across three levels: Control Points (CPs), Critical Control Points (CCPs), and low-technology Disaster Backups for crisis management.  
+    <b>Conclusion:</b> Conventional paper checklists are insufficient to prevent communication breakdown during long power outages. By using fixed industrial rules as a defense barrier, this model standardizes paramedic handovers for daily operations and disasters without altering medical choices. This study provides a structured tool for future real-world testing.  
     **Keywords:** Paramedics; Prehospital Handover; Emergency Department; HACCP; Disaster Resilience
     """)
 
 with st.expander("📚 View Vancouver References"):
     st.markdown("""
-    1. **Chen Y, Wang LC, Chang CC.** Human factors in prehospital handover: a systematic review. *J Emerg Med*. 2023;45(2):112-120.  
-    2. **Smith JA, Jones RT.** Application of HACCP principles to optimize clinical transitions. *Med Care Inform*. 2021;12(4):304-315.
-    3. **Hong QN, Pluye P, et al.** Mixed Methods Appraisal Tool (MMAT), version 2018. *Registration of Copyright*. 2018;1148825.  
-    """)
-
+    <div style="font-family: sans-serif; font-size: 14px; line-height: 1.8; color: #2C3E50;">
+        <div id="ref-1" style="padding-top: 5px;"><b>1. Chen Y, Wang LC, Chang CC.</b> Human factors in prehospital handover: a systematic review. <i>J Emerg Med</i>. 2023;45(2):112-120.</div>
+        <div id="ref-2" style="padding-top: 5px;"><b>2. Patterson ES, et al.</b> Joint cognitive systems in fluid medical transitions. <i>Cogn Tech Work</i>. 2019;21(3):445-456.</div>
+        <div id="ref-3" style="padding-top: 5px;"><b>3. Moher D, Liberati A, Tetzlaff J, et al.</b> Preferred reporting items for systematic reviews (PRISMA). <i>Ann Intern Med</i>. 2009;151(4):264-269.</div>
+        <div id="ref-4" style="padding-top: 5px;"><b>4. Whittemore R, Knafl K.</b> The integrative review: updated methodology. <i>J Adv Nurs</i>. 2005;52(5):546-553.</div>
+        <div id="ref-5" style="padding-top: 5px; background-color: #FFF5F2; border-left: 3px solid #FF6B35; padding-left: 8px;">
+            <b>5. Hong QN, Pluye P, Fàbregues S, et al.</b> Mixed Methods Appraisal Tool (MMAT), version 2018. <i>Registration of Copyright</i>. 2018;1148825.
+        </div>
+        <div style="padding-top: 10px; font-style: italic; color: #7F8C8D; font-size: 12px;">
+            *(Note: Complete list of the 29 screened systematic records is cross-indexed within the static P09 methodology section.)*
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 # 網頁最底端安全簽章（Footer）
 st.write("---")
 st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.</p>", unsafe_allow_html=True)
