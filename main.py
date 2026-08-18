@@ -25,7 +25,7 @@ st.markdown("""
     <div class="patient-banner">
         <b>[PATIENT 病人]</b> Johnathan Doe (62M)<br>
         <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
-        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock (心梗合併早期休克)<br>
+        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock    \  n (疑似心梗改及早期休克)<br>
         <b>[TRIAGE 檢傷]</b> Level 2 (危急)<br>
         <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
     </div>
@@ -58,10 +58,10 @@ st.write("---")
 st.header("🏥 3. SBAR (CCPs)")
 st.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
 
-ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked    \n(檢傷護理師與床位確認)")
-ccp_b = st.checkbox("【B - Background】 History & allergies transferred    \n(病史與過敏史點交)")
-ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned    \n(危急變化與低血壓預警)")
-ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(救護與檢傷確認病床鎖定)")
+ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked    \  n(檢傷護理師與床位確認)")
+ccp_b = st.checkbox("【B - Background】 History & allergies transferred    \  n(病史與過敏史點交)")
+ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned    \  n(危急變化與低血壓預警)")
+ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \  n(救護與檢傷確認病床鎖定)")
 
 # Section 4: Audit Output
 st.write("---")
@@ -123,10 +123,15 @@ st.write("---")
 with st.expander("📄 Academic Abstract",expanded=True):
   st.markdown("""
     **Title:** ***Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review***    
+    
     **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
+    
     **Methods:** Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval [3] to ensure the consistency of data selection and method rigor.  
+    
     **Results:** A management framework was designed by introducing industrial HACCP principles into the EMS system. By establishing a historical operational baseline from 1990 to 2016, prehospital process adjustments show potentials in reducing door-to-imaging and door-to-treatment intervals in downstream hospital units. Through the first principle of hazard analysis, communication failure points are systematically identified across four dimensions: persons, tasks, tools or technology, and the environment. To protect frontline responders from cognitive overload, the risk-monitoring mechanism operates in the background while paramedics use standard MIST or SBAR protocols. The system sets operational boundaries across three levels: Control Points (CPs), Critical Control Points (CCPs), and low-technology Disaster Backups for crisis management.  
+    
     **Conclusion:** Conventional paper checklists are insufficient to prevent communication breakdown during long power outages. By using fixed industrial rules as a defense barrier, this model standardizes paramedic handovers for daily operations and disasters without altering medical choices. This study provides a structured tool for future real-world testing.  
+    
     **Keywords:** Paramedics; Prehospital Handover; Emergency Department; HACCP; Disaster Resilience
     """)
 
