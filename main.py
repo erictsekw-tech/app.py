@@ -51,7 +51,7 @@ with col1:
     m_mechanism = st.text_input("M - Mechanism / Etiology (機轉/病因)", "AMI / Cardiogenic Shock")
     i_injuries = st.text_input("I - Injuries / Symptoms (傷情/症狀)", "Crushing chest pain, Diaphoresis")
 with col2:
-    s_vitals = st.text_input("S - Vitals (BP/HR/SpO2/BT 血壓/心跳/血氧/體溫)", "BP 88/54, HR 108, SpO2 95%", 36C)
+    s_vitals = st.text_input("S - Vitals (BP/HR/SpO2/BT 血壓/心跳/血氧/體溫)", "BP 88/54, HR 108, SpO2 95%, 36.2°C")
     t_treatment = st.text_input("T - Treatment given (處置)", "Aspirin PO / 300mg | NTG SL / Withheld")
 
 # Section 3: SBAR CCP Monitors
