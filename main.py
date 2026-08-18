@@ -25,8 +25,8 @@ st.markdown("""
     <div class="patient-banner">
         <b>[PATIENT 病人]</b> Johnathan Doe (62M)<br>
         <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
-        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early
-            \n Cardiogenic Shock(疑似心肌梗塞梗及早期休克)<br>
+        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with  
+            \n Early Cardiogenic Shock(疑似心肌梗塞梗及早期休克)<br>
         <b>[TRIAGE 檢傷]</b> Level 2 (危急)<br>
         <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
     </div>
@@ -111,7 +111,8 @@ st.write("---")
 st.header("📝 4. Clinical Notes")
 st.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
 expert_name = st.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
-expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (救護員備註/急診點收紀錄):", placeholder="請在此輸入現場異常狀況或同儕指導意見...")
+expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes
+\n (救護員備註/急診點收紀錄):", placeholder="請在此輸入現場異常狀況或同儕指導意見...")
 if st.button("Save Note (儲存備註)"):
     if expert_name and expert_comment:
         st.success(f"✅ Record saved at {(datetime.now() + timedelta(hours=8)).strftime('%H:%M:%S GMT+8 (Local Time)')} (系統資料庫已更新)")
