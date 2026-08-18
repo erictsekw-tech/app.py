@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timedelta
 
 # 1. Premium Academic UI Styling (Lancet Minimalist Style)
-st.set_page_config(page_title="P09 - HACCP EMS", layout="centered")
+st.set_page_config(page_title="P-09 - HACCP EMS", layout="centered")
 st.markdown("""
     <style>
     .main { background-color: #F4F4F6; } /* Warm Light Gray */
@@ -12,6 +12,7 @@ st.markdown("""
     .patient-banner { background-color: #FFFFFF; padding: 12px; border-radius: 4px; border-left: 4px solid #007A87; margin-bottom: 15px; color: #2C3E50; font-size: 14px; line-height: 1.5; }
     div.stButton > button:first-child { background-color: #007A87; color: white; font-weight: bold; border-radius: 4px; width: 100%; height: 45px; font-size: 16px; }
     div.stButton > button:first-child:hover { background-color: #FF6B35; border-color: #FF6B35; }
+    .stExpander div { text-align:justify ! important; text-justify: inter-word ! important; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -121,7 +122,6 @@ if st.button("Save Note (儲存備註)"):
 st.write("---")
 st.header("📄 5. Academic Abstract")
 st.markdown("""
-
     **Title:** Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review  
     **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
     **Methods:** Following PRISMA guidelines based on the PICO framework, and adapting Whittemore and Knafl’s method, a systematic search was conducted across international and regional databases. PubMed and Cochrane Library were searched for global clinical handovers, while Airiti Library was utilized as the regional source for localized prehospital literature. To reduce single-investigator bias, a two-phase literature screening was executed with a 14-day interval [3] to ensure the consistency of data selection and method rigor.  
