@@ -119,8 +119,8 @@ if st.button("Save Note (儲存備註)"):
         st.warning("⚠️ Fields cannot be blank. (欄位不可留白)")
 
 # Section 5: Academic Context
-with st.write("---")
-st.expander("📄 5. Academic Abstract")
+st.write("---")
+with st.expander("📄 5. Academic Abstract"):
 st.markdown("""
     **Title:** Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review  
     **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
