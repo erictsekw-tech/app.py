@@ -57,10 +57,14 @@ st.write("---")
 st.header("🏥 3. SBAR (CCPs)")
 st.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
 
-ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked<br><span style='color: #7F8C8D; font-size: 13px;'>檢傷護理師與床位確認</span>", unsafe_allow_html=True)
-ccp_b = st.checkbox("【B - Background】 History & allergies transferred<br><span style='color: #7F8C8D; font-size: 13px;'>病史與過敏史點交</span>", unsafe_allow_html=True)
-ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned<br><span style='color: #7F8C8D; font-size: 13px;'>危急變化與低血壓預警</span>", unsafe_allow_html=True)
-ccp_r = st.checkbox("【R - Recommendation】 Next-step care transition agreed<br><span style='color: #7F8C8D; font-size: 13px;'>院內照護通道確認</span>", unsafe_allow_html=True)
+ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked
+<br><span style='color: #7F8C8D; font-size: 13px;'>檢傷護理師與床位確認</span>", unsafe_allow_html=True)
+ccp_b = st.checkbox("【B - Background】 History & allergies transferred
+<br><span style='color: #7F8C8D; font-size: 13px;'>病史與過敏史點交</span>", unsafe_allow_html=True)
+ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned
+<br><span style='color: #7F8C8D; font-size: 13px;'>危急變化與低血壓預警</span>", unsafe_allow_html=True)
+ccp_r = st.checkbox("【R - Recommendation】 Next-step care transition agreed
+<br><span style='color: #7F8C8D; font-size: 13px;'>院內照護通道確認</span>", unsafe_allow_html=True)
 
 # Section 4: Audit Output
 st.write("---")
