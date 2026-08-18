@@ -25,8 +25,9 @@ st.markdown("""
     <div class="patient-banner">
         <b>[PATIENT 病人]</b> Johnathan Doe (62M)<br>
         <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
-        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early Cardiogenic Shock(疑似心肌梗塞梗及早期休克)</b> 
-        <b>[TRIAGE 檢傷]</b> Level 2 (危急)<br>
+        <b>[DIAGNOSIS 診斷]</b> Suspected STEMI with Early</b>  
+        <b>Cardiogenic Shock(疑似心肌梗塞梗及早期休克)</b>  
+        <b>[TRIAGE 檢傷]</b> Level 2 (危急)<br>  
         <b>[UNIT 單位]</b> EMS Fire-Based Station A<br>
     </div>
     """, unsafe_allow_html=True)
