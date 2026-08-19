@@ -17,8 +17,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Main Navigation Anchor
-st.title("📱 P-09: EMS HACCP Handover Form")
-st.markdown("<h1 style='margin-top:-15px; font-size:14px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
+st.title("📱 P-09: EMS HACCP Handover")
+st.markdown("<h1 style='margin-top:-15px; font-size:16px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
 st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 
 # 標準醫學首頁牌 (Patient Banner)
