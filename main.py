@@ -17,7 +17,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Main Navigation Anchor
-st.title("📱EMS HACCP Handover")
+st.title("EMS HACCP Handover")
 st.markdown("<h1 style='margin-top:-15px; font-size:24px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
 st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 
