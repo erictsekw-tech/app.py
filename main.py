@@ -77,8 +77,8 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
             st.markdown(f"""
                 <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
                     <b>⚠️ [HACCP TRIGGERED: DATA OMISSION DETECTED]</b><br>
-                    • <b>Status:</b> Critical human factors omission detected in SBAR CCP fields.<br>
-                    • <b>狀態：</b>人為疏漏攔截！SBAR 關鍵控制點未勾選完整。<br>
+                    • <b>Status:</b> Missing critical veriable verfication detected in SBAR CCP fields.<br>
+                    • <b>狀態：</b>受不明原因影響！SBAR 關鍵控制點未勾選完整。<br>
                     • <b>Action:</b> Handover data transmission blocked. Please amend required fields.<br>
                     • <b>處置：</b>交班資料禁止送出，請補正必填欄位。<br>
                     • <b>Timestamp:</b> {current_time}
