@@ -18,7 +18,7 @@ st.markdown("""
 
 # Main Navigation Anchor
 st.title("📱 P-09: EMS HACCP Handover")
-st.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='margin-top:-15px; font-size:24px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
 st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 29 MMAT Core Articles")
 
 # 標準醫學首頁牌 (Patient Banner)
@@ -112,7 +112,7 @@ st.write("---")
 st.header("📝 4. Clinical Notes")
 st.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
 expert_name = st.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
-expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (備註/急診點收紀錄):", placeholder="Please make a note here. 請在此輸入現場異常或同儕指導意見...")
+expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (備註/急診點收紀錄):", placeholder="Please make a note here. 請輸入現場異常或同儕指導意見...")
 if st.button("Save Note (儲存備註)"):
     if expert_name and expert_comment:
         st.success(f"✅ Record saved at {(datetime.now() + timedelta(hours=8)).strftime('%H:%M:%S GMT+8 (Local Time)')} (系統資料庫已更新)")
