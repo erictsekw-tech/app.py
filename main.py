@@ -147,7 +147,7 @@ with st.expander("📚 View References"):
     06. **Hong QN, Pluye P, et al.** Mixed Methods Appraisal Tool (MMAT), version 2018. *Registration of Copyright*. 2018;1148825.<br>
     07. **Whittemore R, Knafl K.** The integrative review: updated methodology. *Journal of Advanced Nursing.* 2005 Dec;52(5):546–53.<br>
     08. **World Health Organization.** Prehospital emergency care: operational guidance for ambulance systems by WHO [Report] [Internet]. *Geneva: World Health Organization; 2025.* Available from: https://www.who.int/publications/i/item/9789240114067<br>
-    09. **Bryan FL** HACCP Present Status and Future in Contribution to Food Safety. [Internet]. [cited 2026 Jul 12]. Available from: https://www.foodprotection.org/members/fpt-archive-articles/1994-11haccp-present-status-and-future-in-contribution-to-food-safety/<br>
+    09. **Bryan FL.** HACCP Present Status and Future in Contribution to Food Safety. [Internet]. [cited 2026 Jul 12]. Available from: https://www.foodprotection.org/members/fpt-archive-articles/1994-11haccp-present-status-and-future-in-contribution-to-food-safety/<br>
     
     10. **Alwidyan MT, Al Ruwaithi AA, Alrawashdeh A, Bashier H, Al-Smeiat M, Ikhwayleh ZA, et al.** Challenges Faced by Jordan’s Search and Rescue Team in the 2023 Turkey Earthquake; A Qualitative Study from Readiness to Response. *Arch Acad Emerg Med.* 2025;13(1):e80.<br>
     """, unsafe_allow_html=True)
