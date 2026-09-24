@@ -148,9 +148,9 @@ with st.expander("📚 View References"):
     7. **Whittemore R, Knafl K.** The integrative review: updated methodology. *Journal of Advanced Nursing.* 2005 Dec;52(5):546–53.<br>
     8. **World Health Organization.** Prehospital emergency care: operational guidance for ambulance systems by WHO [Report] [Internet]. *Geneva: World Health Organization; 2025.* Available from: https://www.who.int/publications/i/item/9789240114067<br>
     9. **Bryan FL** HACCP Present Status and Future in Contribution to Food Safety. [Internet]. [cited 2026 Jul 12]. Available from: https://www.foodprotection.org/members/fpt-archive-articles/1994-11haccp-present-status-and-future-in-contribution-to-food-safety/<br>
-   10.**Alwidyan MT, Al Ruwaithi AA, Alrawashdeh A, Bashier H, Al-Smeiat M, Ikhwayleh ZA, et al.** Challenges Faced by Jordan’s Search and Rescue Team in the 2023 Turkey Earthquake; A Qualitative Study from Readiness to Response. *Arch Acad Emerg Med.* 2025;13(1):e80.
+   10.**Alwidyan MT, Al Ruwaithi AA, Alrawashdeh A, Bashier H, Al-Smeiat M, Ikhwayleh ZA, et al.** Challenges Faced by Jordan’s Search and Rescue Team in the 2023 Turkey Earthquake; A Qualitative Study from Readiness to Response. *Arch Acad Emerg Med.* 2025;13(1):e80.<br>
     """, unsafe_allow_html=True)
     
 # 網頁最底端安全簽章（Footer）
 st.write("---")
-st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.<br> Full paper under review by Journal of Paramedicine and Emergency Response (JPER)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.<br> **Full paper under review by Journal of Paramedicine and Emergency Response (JPER)**</p>", unsafe_allow_html=True)
