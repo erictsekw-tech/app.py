@@ -139,7 +139,7 @@ with st.expander("📄 Academic Abstract",expanded=True):
 
 with st.expander("📚 View References"):
     st.markdown("""
-    01. **Altuwaijri EA, Budgen D, Maxwell S.** Factors impeding the effective utilisation of an electronic patient report form during handover from an ambulance to an emergency department. *Health Informatics J.* 2019 Dec;25(4):1705–21.\<br>
+    01. **Altuwaijri EA, Budgen D, Maxwell S.** Factors impeding the effective utilisation of an electronic patient report form during handover from an ambulance to an emergency department. *Health Informatics J.* 2019 Dec;25(4):1705–21.<br>
     02. **Nuernberger M, Lang S, Maass T, Lehmann T, Brodoehl S, Lewejohann JC.** The Effects of an ISOBAR-Structured Patient Handover Conversation Between Rescue Services and Emergency Department Staff: The COPTER Trial. *J Am Coll Emerg Physicians Open.* 2025 Feb;6(1):100011.<br>
     03. **Poranen A, Kouvonen A, Nordquist H.** Human errors in emergency medical services: a qualitative analysis of contributing factors. *Scand J Trauma Resusc Emerg Med.* 2024 Aug 30;32(1):78.<br>
     04. **Schardt C, Adams MB, Owens T, Keitz S, Fontelo P.** Utilization of the PICO framework to improve searching PubMed for clinical questions. *BMC Med Inform Decis Mak.* 2007 Jun 15;7:16.<br>
