@@ -153,5 +153,4 @@ with st.expander("📚 View References"):
     
 # 網頁最底端安全簽章（Footer）
 st.write("---")
-st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.<br>
-Full paper under review by Journal of Paramedicine and Emergency Response (JPER)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 11px; color: #95A5A6; font-family: sans-serif;'>© 2026 PERIC Project P-09. Developed for Academic Evaluation and Technical Audit Only.<br> Full paper under review by Journal of Paramedicine and Emergency Response (JPER)</p>", unsafe_allow_html=True)
