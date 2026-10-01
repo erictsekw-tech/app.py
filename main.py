@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 # ==============================================================================
 # 🎨 Nordic Minimalism AI Disclosure (置於最頂端)
 # ==============================================================================
-at.markdown(
+streamlit.markdown(
     """
     <div style="
         background-color: #F8F9FA; 
