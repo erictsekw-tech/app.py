@@ -169,7 +169,7 @@ if at.button("Save Note (儲存備註)"):
 
 # Section 5: Academic Context
 at.write("---")
-with st.expander("📄 Academic Abstract",expanded=True):
+with at.expander("📄 Academic Abstract",expanded=True):
   at.markdown("""
     **Title:** ***Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review***    
     
