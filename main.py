@@ -14,9 +14,9 @@ at.markdown("""
 * **Authors' Responsibility:** All core methodologies, data interpretations, and conclusions were fully verified and remain the sole responsibility of the authors.
 
 ---
-*提示：本研究使用 Google Gemini 輔助學術英文潤飾、程式碼除錯與海報視覺設計，核心研究由作者完全負責。
-""")
 
+<span style='font-size: 0.75rem; color: #94A3B8;'>*提示：本研究使用 Google Gemini 輔助學術英文潤飾、程式碼除錯與海報視覺設計，核心研究由作者完全負責。</span>
+""", unsafe_allow_html=True)
 # ==============================================================================
 # 1. Premium Academic UI Styling (Lancet Minimalist Style)
 at.set_page_config(page_title="P-09 - HACCP EMS", layout="centered")
