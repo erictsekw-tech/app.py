@@ -2,7 +2,6 @@ import streamlit as st
 import time
 from datetime import datetime, timedelta
 
-
 # ==============================================================================
 # 🎨 Nordic Minimalism AI Disclosure (置於最頂端)
 # ==============================================================================
