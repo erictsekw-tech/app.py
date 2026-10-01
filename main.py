@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 # AI DISCLOSURE STATEMENT (Lancet Minimalist Style-Fine Print)
 # ==============================================================================
 at.caption("""
-**AI DISCLOSURE STATEMENT**
+**AI DISCLOSURE STATEMENT**<br>
 *Note: Due to a printing oversight, this disclosure was omitted from the physical poster.*
 
 * **Tools Used:** Google Gemini
