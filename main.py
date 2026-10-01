@@ -3,10 +3,10 @@ import time
 from datetime import datetime, timedelta
 
 # ==============================================================================
-# AI DISCLOSURE STATEMENT (Lancet Minimalist Style)
+# AI DISCLOSURE STATEMENT (Lancet Minimalist Style-Fine Print)
 # ==============================================================================
-at.error("AI DISCLOSURE STATEMENT")
-at.markdown("""
+at.caption("""
+**AI DISCLOSURE STATEMENT" **
 *Note: Due to a printing oversight, this disclosure was omitted from the physical poster.*
 
 * **Tools Used:** Google Gemini
