@@ -83,7 +83,7 @@ at.markdown("""
 # Section 1: Connectivity (Resilience Matrix)
 at.header("🌐 1. Network State")
 at.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(網路狀態)</h1>", unsafe_allow_html=True)
-network_mode = st.radio(
+network_mode = at.radio(
     "Select Network State:",
     ["Online (Cloud-Protected Mode / 雲端連線)", "Offline (Total Network Outage / 斷網模式)"],
     label_visibility="collapsed"
@@ -94,34 +94,34 @@ at.write("---")
 at.header("🚑 2. MIST Datasets")
 at.markdown("<h2 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(到院前摘要)</h2>", unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
+col1, col2 = at.columns(2)
 with col1:
-    m_mechanism = st.text_input("M - Mechanism / Etiology (機轉/病因)", "AMI / Cardiogenic Shock")
-    i_injuries = st.text_input("I - Injuries / Symptoms (傷情/症狀)", "Crushing chest pain, Diaphoresis")
+    m_mechanism = at.text_input("M - Mechanism / Etiology (機轉/病因)", "AMI / Cardiogenic Shock")
+    i_injuries = at.text_input("I - Injuries / Symptoms (傷情/症狀)", "Crushing chest pain, Diaphoresis")
 with col2:
-    s_vitals = st.text_input("S - Vitals (BP/HR/SpO2/BT 血壓/心跳/血氧/體溫)", "BP 88/54, HR 108, SpO2 95%, 36.2°C")
-    t_treatment = st.text_input("T - Treatment given (處置)", "Aspirin PO / 300mg | NTG SL / Withheld")
+    s_vitals = at.text_input("S - Vitals (BP/HR/SpO2/BT 血壓/心跳/血氧/體溫)", "BP 88/54, HR 108, SpO2 95%, 36.2°C")
+    t_treatment = at.text_input("T - Treatment given (處置)", "Aspirin PO / 300mg | NTG SL / Withheld")
 
 # Section 3: SBAR CCP Monitors
 at.write("---")
 at.header("🏥 3. SBAR (CCPs)")
 at.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
 
-ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked    \n(檢傷護理師與床位確認)")
-ccp_b = st.checkbox("【B - Background】 PH(HTN,PCI) & Allergies transferred    \n(病史與過敏史點交)")
-ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned    \n(危急變化與低血壓預警)")
-ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(院內照護通道確認)")
+ccp_s = at.checkbox("【S - Situation】 ED Nurse identified & bed locked    \n(檢傷護理師與床位確認)")
+ccp_b = at.checkbox("【B - Background】 PH(HTN,PCI) & Allergies transferred    \n(病史與過敏史點交)")
+ccp_a = at.checkbox("【A - Assessment】 Critical variations pre-warned    \n(危急變化與低血壓預警)")
+ccp_r = at.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(院內照護通道確認)")
 
 # Section 4: Audit Output
 at.write("---")
-if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審核)"):
-    with st.spinner("Auditing..."): 
+if at.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審核)"):
+    with at.spinner("Auditing..."): 
         time.sleep(0.4)
     current_time = (datetime.now() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S GMT+8 (Local Time)")
         
     if network_mode.startswith("Online"):
         if not (ccp_s and ccp_b and ccp_a and ccp_r):
-            st.markdown(f"""
+            at.markdown(f"""
                 <div style="background-color: #FF6B35; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
                     <b>⚠️ [HACCP TRIGGERED: DATA OMISSION DETECTED]</b><br>
                     • <b>Status:</b> Missing critical veriable verfication detected in SBAR CCP fields.<br>
@@ -132,7 +132,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
                 </div>
                 """, unsafe_allow_html=True)
         else:
-            st.markdown(f"""
+            at.markdown(f"""
                 <div style="background-color: #2E7D32; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
                     <b>✅ [HANDOVER AUDIT COMPLIANT]</b><br>
                     • <b>Status:</b> 100% compliant with HACCP safety control metrics.<br>
@@ -143,7 +143,7 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
                 </div>
                 """, unsafe_allow_html=True)
     else:
-        st.markdown(f"""
+        at.markdown(f"""
             <div style="background-color: #2C3E50; padding: 15px; border-radius: 4px; color: white; font-family: sans-serif; font-size: 14px; line-height: 1.6;">
                 <b>🔌 [CONTINGENCY PLAN ENGAGED: OFFLINE MODE]</b><br>
                 • <b>Status:</b> Total network outage detected. Localized fallback activated.<br>
@@ -158,14 +158,14 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
 at.write("---")
 at.header("📝 4. Clinical Notes")
 at.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
-expert_name = st.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
-expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (備註/急診點收紀錄):", placeholder="Please make a note here. 請輸入現場異常或同儕指導意見...")
+expert_name = at.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
+expert_comment = at.text_area("Paramedic Remarks / ED Verification Notes (備註/急診點收紀錄):", placeholder="Please make a note here. 請輸入現場異常或同儕指導意見...")
 if at.button("Save Note (儲存備註)"):
     if expert_name and expert_comment:
-        st.success(f"✅ Record saved at {(datetime.now() + timedelta(hours=8)).strftime('%H:%M:%S GMT+8 (Local Time)')} (系統資料庫已更新)")
-        st.markdown("<p style='font-size: 11px; color: #7F8C8D; font-style: italic; margin-top: 10px;'>* Sandbox simulation portal available until October 31, 2026. All data logs are synchronized and cleared dynamically.</p>", unsafe_allow_html=True)
+        at.success(f"✅ Record saved at {(datetime.now() + timedelta(hours=8)).strftime('%H:%M:%S GMT+8 (Local Time)')} (系統資料庫已更新)")
+        at.markdown("<p style='font-size: 11px; color: #7F8C8D; font-style: italic; margin-top: 10px;'>* Sandbox simulation portal available until October 31, 2026. All data logs are synchronized and cleared dynamically.</p>", unsafe_allow_html=True)
     else:
-        st.warning("⚠️ Fields cannot be blank. (欄位不可留白)")
+        at.warning("⚠️ Fields cannot be blank. (欄位不可留白)")
 
 # Section 5: Academic Context
 at.write("---")
@@ -184,8 +184,8 @@ with st.expander("📄 Academic Abstract",expanded=True):
     **Keywords:** Paramedics; Prehospital Handover; Emergency Department; HACCP; Disaster Resilience
     """)
 
-with st.expander("📚 View References"):
-    st.markdown("""
+with at.expander("📚 View References"):
+    at.markdown("""
     01. **Altuwaijri EA, Budgen D, Maxwell S.** Factors impeding the effective utilisation of an electronic patient report form during handover from an ambulance to an emergency department. *Health Informatics J.* 2019 Dec;25(4):1705–21.<br>
     02. **Nuernberger M, Lang S, Maass T, Lehmann T, Brodoehl S, Lewejohann JC.** The Effects of an ISOBAR-Structured Patient Handover Conversation Between Rescue Services and Emergency Department Staff: The COPTER Trial. *J Am Coll Emerg Physicians Open.* 2025 Feb;6(1):100011.<br>
     03. **Poranen A, Kouvonen A, Nordquist H.** Human errors in emergency medical services: a qualitative analysis of contributing factors. *Scand J Trauma Resusc Emerg Med.* 2024 Aug 30;32(1):78.<br>
