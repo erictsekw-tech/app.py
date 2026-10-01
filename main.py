@@ -64,12 +64,12 @@ at.markdown("""
     """, unsafe_allow_html=True)
 
 # Main Navigation Anchor
-st.title("EMS HACCP Handover")
-st.markdown("<h1 style='margin-top:-15px; font-size:24px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
-st.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 28 MMAT Core Articles")
+at.title("EMS HACCP Handover")
+at.markdown("<h1 style='margin-top:-15px; font-size:24px; color:#7F8C8D; font-weight:normal;'>(Interactive Evaluative Platform)</h1>", unsafe_allow_html=True)
+at.caption("SEIPS 2.0 Engine | SBAR-MIST Protocol | 28 MMAT Core Articles")
 
 # 標準醫學首頁牌 (Patient Banner)
-st.markdown("""
+at.markdown("""
     <div class="patient-banner">
         <b>[PATIENT 病人]</b> Johnathan Doe (62M)<br>
         <b>[CASE ID 個案編號]</b> TW-2026-AMI-0817<br>
@@ -81,8 +81,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Section 1: Connectivity (Resilience Matrix)
-st.header("🌐 1. Network State")
-st.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(網路狀態)</h1>", unsafe_allow_html=True)
+at.header("🌐 1. Network State")
+at.markdown("<h1 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(網路狀態)</h1>", unsafe_allow_html=True)
 network_mode = st.radio(
     "Select Network State:",
     ["Online (Cloud-Protected Mode / 雲端連線)", "Offline (Total Network Outage / 斷網模式)"],
@@ -90,9 +90,9 @@ network_mode = st.radio(
 )
 
 # Section 2: MIST Datasets (Short Keywords)
-st.write("---")
-st.header("🚑 2. MIST Datasets")
-st.markdown("<h2 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(到院前摘要)</h2>", unsafe_allow_html=True)
+at.write("---")
+at.header("🚑 2. MIST Datasets")
+at.markdown("<h2 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(到院前摘要)</h2>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -103,9 +103,9 @@ with col2:
     t_treatment = st.text_input("T - Treatment given (處置)", "Aspirin PO / 300mg | NTG SL / Withheld")
 
 # Section 3: SBAR CCP Monitors
-st.write("---")
-st.header("🏥 3. SBAR (CCPs)")
-st.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
+at.write("---")
+at.header("🏥 3. SBAR (CCPs)")
+at.markdown("<h3 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>Critical Control Points (關鍵控制點查檢)</h3>", unsafe_allow_html=True)
 
 ccp_s = st.checkbox("【S - Situation】 ED Nurse identified & bed locked    \n(檢傷護理師與床位確認)")
 ccp_b = st.checkbox("【B - Background】 PH(HTN,PCI) & Allergies transferred    \n(病史與過敏史點交)")
@@ -113,7 +113,7 @@ ccp_a = st.checkbox("【A - Assessment】 Critical variations pre-warned    \n(�
 ccp_r = st.checkbox("【R - Recommendation】 Expected care transition confirmed    \n(院內照護通道確認)")
 
 # Section 4: Audit Output
-st.write("---")
+at.write("---")
 if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審核)"):
     with st.spinner("Auditing..."): 
         time.sleep(0.4)
@@ -155,12 +155,12 @@ if st.button("📲 Transmit & Verify HACCP Audit Trail (資料傳輸與流程審
             """, unsafe_allow_html=True)
         
 # Section 4: Clinical Notes
-st.write("---")
-st.header("📝 4. Clinical Notes")
-st.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
+at.write("---")
+at.header("📝 4. Clinical Notes")
+at.markdown("<h4 style='margin-top:-15px; font-size:18px; color:#7F8C8D; font-weight:normal;'>(臨床備註欄)</h4>", unsafe_allow_html=True)
 expert_name = st.text_input("User ID / Institution (人員代號/單位):", placeholder="e.g., Paramedic Team A / ED Triage")
 expert_comment = st.text_area("Paramedic Remarks / ED Verification Notes (備註/急診點收紀錄):", placeholder="Please make a note here. 請輸入現場異常或同儕指導意見...")
-if st.button("Save Note (儲存備註)"):
+if at.button("Save Note (儲存備註)"):
     if expert_name and expert_comment:
         st.success(f"✅ Record saved at {(datetime.now() + timedelta(hours=8)).strftime('%H:%M:%S GMT+8 (Local Time)')} (系統資料庫已更新)")
         st.markdown("<p style='font-size: 11px; color: #7F8C8D; font-style: italic; margin-top: 10px;'>* Sandbox simulation portal available until October 31, 2026. All data logs are synchronized and cleared dynamically.</p>", unsafe_allow_html=True)
@@ -168,9 +168,9 @@ if st.button("Save Note (儲存備註)"):
         st.warning("⚠️ Fields cannot be blank. (欄位不可留白)")
 
 # Section 5: Academic Context
-st.write("---")
+at.write("---")
 with st.expander("📄 Academic Abstract",expanded=True):
-  st.markdown("""
+  at.markdown("""
     **Title:** ***Development of a HACCP-Based Framework to Optimise Prehospital Handover Communication for Paramedics: A Comprehensive Review***    
     
     **Background:** Information loss frequently occurs during prehospital handovers between EMS paramedics and emergency department (ED) staff due to routine interference factors. This problem becomes even more severe during natural disasters when communication networks and power grids fail. By applying the operational logic of industrial Hazard Analysis Critical Control Point (HACCP) principles, this study develops a process model to decrease communication errors during both daily operations and total network failures.  
