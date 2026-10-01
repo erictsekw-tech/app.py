@@ -50,7 +50,7 @@ at.markdown(
 )
 
 # 1. Premium Academic UI Styling (Lancet Minimalist Style)
-st.set_page_config(page_title="P-09 - HACCP EMS", layout="centered")
+at.set_page_config(page_title="P-09 - HACCP EMS", layout="centered")
 st.markdown("""
     <style>
     .main { background-color: #F4F4F6; } /* Warm Light Gray */
