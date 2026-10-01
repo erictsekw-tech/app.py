@@ -3,44 +3,21 @@ import time
 from datetime import datetime, timedelta
 
 # ==============================================================================
-# 🎨 Nordic Minimalism AI Disclosure (置於最頂端)
+# AI DISCLOSURE STATEMENT (Lancet Minimalist Style)
 # ==============================================================================
-at.markdown(
-    """
-    <div style="
-        background-color: #F8F9FA; 
-        border-left: 3px solid #7D8E87; 
-        padding: 22px;
-        border-radius: 4px;
-        margin-bottom: 35px;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-    ">
-        <!-- Title -->
-        <h4 style="color: #2C3E50; margin: 0; font-weight: 500; letter-spacing: 0.5px; font-size: 1.15rem;">
-            🪡 AI Disclosure Statement
-        </h4>
-        
-        ai_html = """
-<div style="background-color: #F8F9FA; border-left: 3px solid #7D8E87; padding: 22px; border-radius: 4px; margin-bottom: 35px; font-family: 'Helvetica Neue', Arial, sans-serif;">
-    <h4 style="color: #2C3E50; margin: 0; font-weight: 500; letter-spacing: 0.5px; font-size: 1.15rem;">🪡 AI Disclosure Statement</h4>
-    <p style="color: #95A5A6; font-size: 0.82rem; font-style: italic; margin-top: 6px; margin-bottom: 16px;">*Note: Due to a printing oversight, this disclosure was omitted from the physical poster.*</p>
-    <div style="color: #34495E; font-size: 0.95rem; line-height: 1.6;">
-        <ul style="margin: 0; padding-left: 20px; color: #4A5568;">
-            <li style="margin-bottom: 8px;"><strong style="color: #2D3748;">Tools Used:</strong> Google Gemini</li>
-            <li style="margin-bottom: 8px;"><strong style="color: #2D3748;">Application:</strong> Academic language polishing, Python code debugging for data visualization, and assistance with poster layout and visual design elements.</li>
-            <li><strong style="color: #2D3748;">Authors' Responsibility:</strong> All core methodologies, data interpretations, and conclusions were fully verified and remain the sole responsibility of the authors.</li>
-        </ul>
-    </div>
-    <p style="color: #CBD5E1; font-size: 0.72rem; margin-top: 15px; margin-bottom: 0; text-align: right; letter-spacing: 0.5px;">*提示：本研究使用 Google Gemini 輔助學術英文潤飾、程式碼除錯與海報視覺設計，核心研究由作者完全負責。</p>
-</div>
-"""
+at.error("AI DISCLOSURE STATEMENT")
+at.markdown("""
+*Note: Due to a printing oversight, this disclosure was omitted from the physical poster.*
 
-at.markdown(ai_html, unsafe_allow_html=True)
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+* **Tools Used:** Google Gemini
+* **Application:** Academic language polishing, Python code debugging for data visualization, and assistance with poster layout and visual design elements.
+* **Authors' Responsibility:** All core methodologies, data interpretations, and conclusions were fully verified and remain the sole responsibility of the authors.
 
+---
+*提示：本研究使用 Google Gemini 輔助學術英文潤飾、程式碼除錯與海報視覺設計，核心研究由作者完全負責。
+""")
+
+# ==============================================================================
 # 1. Premium Academic UI Styling (Lancet Minimalist Style)
 at.set_page_config(page_title="P-09 - HACCP EMS", layout="centered")
 at.markdown("""
